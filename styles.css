@@ -1,0 +1,233 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #4d4e53;
+    font-family: 'Open Sans', Arial,sans-serif; 
+    margin: 0;
+}
+
+#main-doc {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.container {
+    width: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+
+/* Nav */
+nav {
+    position: fixed;
+    width: 20%;
+    border-right: 3px solid rgb(134, 134, 134);
+    height: 100%;
+}
+
+nav header {
+    padding: 10px 30px;
+    padding-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+nav ul li {
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+nav ul li:nth-of-type(7) {
+    border-bottom: 1px solid black;
+}
+.nav-link {
+    text-decoration: none;
+    color:#4d4e53;
+    display: block;
+    cursor: pointer;
+    padding: 10px 30px;
+}
+
+/* Content */
+
+header {
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+}
+
+header:nth-of-type(1){
+    padding-top: 15px;
+}
+
+.main-section h4{
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    padding: 0;
+    margin: 0;
+}
+#content {
+    margin: 0 auto;
+}
+
+img {
+    width: 70%;
+    height: auto;
+    /*
+    max-height: 300px;
+    max-width: 500px;
+    */
+}
+
+#img-caption {
+    text-align: center;
+    font-style: italic;
+}
+.main-section li {
+    margin-bottom: 5px;
+}
+
+.bold-text {
+    font-weight: bold;
+    color: black;
+}
+
+/* Code */
+code {
+    color: black;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+
+}
+
+pre {
+    background-color: rgb(237, 237, 236);
+}
+
+.inline-code {
+    font-size: 16px;
+    border: #4d4e53 1px solid;
+    padding: 2px;
+    border-radius: 3px;
+    background-color: rgb(237, 237, 236);
+    position: initial;
+}
+
+/* Footer */
+footer p {
+   font-size: 12px;
+   margin: 0;
+   padding-top: 30px;
+   margin-bottom: 10px;
+}
+
+/* Media queries */
+
+@media (max-width: 1000px) {
+
+
+    #main-doc {
+        display: grid; 
+        grid-template-columns: 1fr;
+    }
+    
+    nav {
+        position: relative;
+        width: 100%;
+        border: none;
+        height: 100%;
+    }
+
+    .container:nth-of-type(1) {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-link {
+        padding: 10px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+    /*
+    img {
+        max-height: 150px;
+    }
+    */
+
+    code {
+        position: relative;
+        /*left: -230px;*/
+        left: -30%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:1000px) {
+    code {
+        left: -20%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:500px) {
+    code {
+        left: -50%;
+        font-size: 12px;
+    }
+}
+@media (max-width:600px) {
+    code {
+        left: -50%;
+        font-size: 14px;
+    }
+}
+@media (max-width:415px) {
+    code {
+        left: -64%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:390px) {
+    code {
+        left: -62%;
+        font-size: 11px;
+    }
+}
+
+@media (max-width:380px) {
+    code {
+        /*left: -230px;*/
+        left: -66%;
+        font-size: 11px;
+    }
+}

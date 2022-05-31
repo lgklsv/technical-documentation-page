@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>technical-documentation-page</title>
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+    </head>
+    <body>
+        <main id="main-doc">
+            <div class="container">
+                <nav id="navbar">
+                    <header>Kafka Introduction</header>
+                    <ul>
+                        <li>
+                            <a class="nav-link" href="#What_is_event_streaming?">What is event streaming?</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  href="#What_can_I_use_event_streaming_for?">What can I use event streaming for?</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  href="#Apache_Kafka®_is_an_event_streaming_platform._What_does_that_mean?">Apache Kafka® is an event streaming platform. What does that mean?</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  href="#How_does_Kafka_work_in_a_nutshell?">How does Kafka work in a nutshell?</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  href="#Main_Concepts_and_Terminology">Main Concepts and Terminology</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  href="#Kafka_APIs">Kafka APIs</a>
+                        </li>
+                        <li>
+                            <a class="nav-link"  href="#Where_to_go_from_here">Where to go from here</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="container" id="content">
+                <section class="main-section" id="What_is_event_streaming?">
+                    <header>What is event streaming?</header>
+                    <article>
+                        <p>Event streaming is the digital equivalent of the human body's central nervous system. It is the technological foundation for the 'always-on' world where businesses are increasingly software-defined and automated, and where the user of software is more software.</p>
+                        <p>Technically speaking, event streaming is the practice of capturing data in real-time from event sources like databases, sensors, mobile devices, cloud services, and software applications in the form of streams of events; storing these event streams durably for later retrieval; manipulating, processing, and reacting to the event streams in real-time as well as retrospectively; and routing the event streams to different destination technologies as needed. Event streaming thus ensures a continuous flow and interpretation of data so that the right information is at the right place, at the right time.</p>
+                    </article>
+                </section>
+
+                <section class="main-section" id="What_can_I_use_event_streaming_for?">
+                    <header>What can I use event streaming for?</header>
+                    <article>
+                        <p>Event streaming is applied to a wide variety of use cases across a plethora of industries and organizations. Its many examples include:
+                        </p>
+                        <ul>
+                            <li>To process payments and financial transactions in real-time, such as in stock exchanges, banks, and insurances.</li>
+                            <li>To track and monitor cars, trucks, fleets, and shipments in real-time, such as in logistics and the automotive industry.</li>
+                            <li>To continuously capture and analyze sensor data from IoT devices or other equipment, such as in factories and wind parks.</li>
+                            <li>To collect and immediately react to customer interactions and orders, such as in retail, the hotel and travel industry, and mobile applications.</li>
+                            <li>To monitor patients in hospital care and predict changes in condition to ensure timely treatment in emergencies.</li>
+                            <li>To connect, store, and make available data produced by different divisions of a company.
+                            </li>
+                            <li>To serve as the foundation for data platforms, event-driven architectures, and microservices.</li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section class="main-section" id="Apache_Kafka®_is_an_event_streaming_platform._What_does_that_mean?">
+                    <header>Apache Kafka® is an event streaming platform. What does that mean?</header>
+                    <article>
+                        <p>Kafka combines three key capabilities so you can implement your use cases for event streaming end-to-end with a single battle-tested solution:</p>
+                        <ol>
+                            <li>To <span class="bold-text">publish</span> (write) and <span class="bold-text">subscribe to</span> (read) streams of events, including continuous import/export of your data from other systems.</li>
+                            <li>To <span class="bold-text">store</span> streams of events durably and reliably for as long as you want.
+                            </li>
+                            <li>To <span class="bold-text">process</span> streams of events as they occur or retrospectively.
+                            </li>
+                        </ol>
+                        <p>And all this functionality is provided in a distributed, highly scalable, elastic, fault-tolerant, and secure manner. Kafka can be deployed on bare-metal hardware, virtual machines, and containers, and on-premises as well as in the cloud. You can choose between self-managing your Kafka environments and using fully managed services offered by a variety of vendors.
+                        </p>
+                    </article>
+                </section>
+
+                <section class="main-section" id="How_does_Kafka_work_in_a_nutshell?">
+                    <header>How does Kafka work in a nutshell?</header>
+                    <article>
+                        <p>Kafka is a distributed system consisting of <span class="bold-text">servers</span> and <span class="bold-text">clients</span> that communicate via a high-performance TCP network protocol. It can be deployed on bare-metal hardware, virtual machines, and containers in on-premise as well as cloud environment</p>
+                        <p><span class="bold-text">Servers:</span> Kafka is run as a cluster of one or more servers that can span multiple datacenters or cloud regions. Some of these servers form the storage layer, called the brokers. Other servers run Kafka Connect to continuously import and export data as event streams to integrate Kafka with your existing systems such as relational databases as well as other Kafka clusters. To let you implement mission-critical use cases, a Kafka cluster is highly scalable and fault-tolerant: if any of its servers fails, the other servers will take over their work to ensure continuous operations without any data loss.</p>
+                        <p><span class="bold-text">Clients:</span> They allow you to write distributed applications and microservices that read, write, and process streams of events in parallel, at scale, and in a fault-tolerant manner even in the case of network problems or machine failures. Kafka ships with some such clients included, which are augmented by dozens of clients provided by the Kafka community: clients are available for Java and Scala including the higher-level Kafka Streams library, for Go, Python, C/C++, and many other programming languages as well as REST APIs.</p>
+                    </article>
+                </section>
+
+                <section class="main-section" id="Main_Concepts_and_Terminology">
+                    <header>Main Concepts and Terminology</header>
+                    <article>
+                        <p>An <span class="bold-text">event</span> records the fact that "something happened" in the world or in your business. It is also called record or message in the documentation. When you read or write data to Kafka, you do this in the form of events. Conceptually, an event has a key, value, timestamp, and optional metadata headers. Here's an example event:</p>
+                        <ul>
+                            <li>Event key: "Alice"</li>
+                            <li>Event value: "Made a payment of $200 to Bob"</li>
+                            <li>Event timestamp: "Jun. 25, 2020 at 2:06 p.m."</li>
+                        </ul>
+                        <p><span class="bold-text">Producers</span> are those client applications that publish (write) events to Kafka, and <span class="bold-text">consumers</span> are those that subscribe to (read and process) these events. In Kafka, producers and consumers are fully decoupled and agnostic of each other, which is a key design element to achieve the high scalability that Kafka is known for. For example, producers never need to wait for consumers. Kafka provides various guarantees such as the ability to process events exactly-once.</p>
+                        <p>Events are organized and durably stored in <span class="bold-text">topics</span>. Very simplified, a topic is similar to a folder in a filesystem, and the events are the files in that folder. An example topic name could be "payments". Topics in Kafka are always multi-producer and multi-subscriber: a topic can have zero, one, or many producers that write events to it, as well as zero, one, or many consumers that subscribe to these events. Events in a topic can be read as often as needed—unlike traditional messaging systems, events are not deleted after consumption. Instead, you define for how long Kafka should retain your events through a per-topic configuration setting, after which old events will be discarded. Kafka's performance is effectively constant with respect to data size, so storing data for a long time is perfectly fine.</p>
+                        <p>Topics are <span class="bold-text">partitioned</span>, meaning a topic is spread over a number of "buckets" located on different Kafka brokers. This distributed placement of your data is very important for scalability because it allows client applications to both read and write the data from/to many brokers at the same time. When a new event is published to a topic, it is actually appended to one of the topic's partitions. Events with the same event key (e.g., a customer or vehicle ID) are written to the same partition, and Kafka guarantees that any consumer of a given topic-partition will always read that partition's events in exactly the same order as they were written.</p>
+                        <img src="https://kafka.apache.org/images/streams-and-tables-p1_p4.png" alt="example">
+                        <p id="img-caption">Figure: This example topic has four partitions P1–P4. Two different producer clients are publishing, independently from each other, new events to the topic by writing events over the network to the topic's partitions. Events with the same key (denoted by their color in the figure) are written to the same partition. Note that both producers can write to the same partition if appropriate.</p>
+                        <p>To make your data fault-tolerant and highly-available, every topic can be <span class="bold-text">replicated</span>, even across geo-regions or datacenters, so that there are always multiple brokers that have a copy of the data just in case things go wrong, you want to do maintenance on the brokers, and so on. A common production setting is a replication factor of 3, i.e., there will always be three copies of your data. This replication is performed at the level of topic-partitions.</p>
+                        <p>This primer should be sufficient for an introduction. The Design section of the documentation explains Kafka's various concepts in full detail, if you are interested.</p>
+                    </article>
+                </section>
+
+                <section class="main-section" id="Kafka_APIs">
+                    <header>Kafka APIs</header>
+                    <article>
+                        <p>In addition to command line tooling for management and administration tasks, Kafka has five core APIs for Java and Scala:</p>
+                        <ul>
+                            <li>The Admin API to manage and inspect topics, brokers, and other Kafka objects.
+                            </li>
+                            <li>The Producer API to publish (write) a stream of events to one or more Kafka topics.
+                            </li>
+                            <li>The Consumer API to subscribe to (read) one or more topics and to process the stream of events produced to them.
+                            </li>
+                            <li>The Kafka Streams API to implement stream processing applications and microservices. It provides higher-level functions to process event streams, including transformations, stateful operations like aggregations and joins, windowing, processing based on event-time, and more. Input is read from one or more topics in order to generate output to one or more topics, effectively transforming the input streams to output streams.
+                            </li>
+                            <li>The Kafka Connect API to build and run reusable data import/export connectors that consume (read) or produce (write) streams of events from and to external systems and applications so they can integrate with Kafka. For example, a connector to a relational database like PostgreSQL might capture every change to a set of tables. However, in practice, you typically don't need to implement your own connectors because the Kafka community already provides hundreds of ready-to-use connectors.
+                            </li>
+                        </ul>
+
+                        <h4>Producer API</h4>
+                        <p>The Producer API allows applications to send streams of data to topics in the Kafka cluster.
+                        </p>
+                        <p>Examples showing how to use the producer are given in the javadocs.
+                        </p>
+                        <p>To use the producer, you can use the following maven dependency:
+                        </p>
+                        <pre>
+                            <code>
+                                &lt;dependency&gt;
+                                    &lt;groupId&gt;org.apache.kafka&lt;/groupId&gt;
+                                    &lt;artifactId&gt;kafka-clients&lt;/artifactId&gt;
+                                    &lt;version&gt;3.2.0&lt;/version&gt;
+                                &lt;/dependency&gt;
+                            </code>
+                        </pre>
+
+                        <h4>Consumer API</h4>
+                        <p>The Consumer API allows applications to read streams of data from topics in the Kafka cluster.
+                        </p>
+                        <p>Examples showing how to use the consumer are given in the javadocs.
+                        </p>
+                        <p>To use the consumer, you can use the following maven dependency:
+                        </p>
+                        <pre>
+                            <code>
+                                &lt;dependency&gt;
+                                    &lt;groupId&gt;org.apache.kafka&lt;/groupId&gt;
+                                    &lt;artifactId&gt;kafka-clients&lt;/artifactId&gt;
+                                    &lt;version&gt;3.2.0&lt;/version&gt;
+                                &lt;/dependency&gt;
+                            </code>
+                        </pre>
+
+                        <h4>Streams API</h4>
+                        <p>The Streams API allows transforming streams of data from input topics to output topics.
+                        </p>
+                        <p>Examples showing how to use this library are given in the javadocs
+                        </p>
+                        <p>Additional documentation on using the Streams API is available here.
+                        </p>
+                        <p>To use Kafka Streams you can use the following maven dependency:
+                        </p>
+                        <pre>
+                            <code>
+                                &lt;dependency&gt;
+                                    &lt;groupId&gt;org.apache.kafka&lt;/groupId&gt;
+                                    &lt;artifactId&gt;kafka-streams&lt;/artifactId&gt;
+                                    &lt;version&gt;3.2.0&lt;/version&gt;
+                                &lt;/dependency&gt;
+                            </code>
+                        </pre>
+                        <p>When using Scala you may optionally include the <code class="inline-code">kafka-streams-scala</code> library. Additional documentation on using the Kafka Streams DSL for Scala is available in the developer guide.</p>
+                        <p>To use Kafka Streams DSL for Scala for Scala 2.13 you can use the following maven dependency:
+                        </p>
+                        <pre>
+                            <code>
+                                &lt;dependency&gt;
+                                    &lt;groupId&gt;org.apache.kafka&lt;/groupId&gt;
+                                    &lt;artifactId&gt;kafka-streams-scala_2.13
+                                    &lt;/artifactId&gt;
+                                    &lt;version&gt;3.2.0&lt;/version&gt;
+                                &lt;/dependency&gt;
+                            </code>
+                        </pre>
+
+                        <h4>Connect API</h4>
+                        <p>The Connect API allows implementing connectors that continually pull from some source data system into Kafka or push from Kafka into some sink data system.
+                        </p>
+                        <p>Many users of Connect won't need to use this API directly, though, they can use pre-built connectors without needing to write any code. Additional information on using Connect is available here.
+                        </p>
+                        <p>Those who want to implement custom connectors can see the javadoc.
+                        </p>
+
+                        <h4>Admin API</h4>
+                        <p>The Admin API supports managing and inspecting topics, brokers, acls, and other Kafka objects.
+                        </p>
+                        <p>To use the Admin API, add the following Maven dependency:
+                        </p>
+                        <pre>
+                            <code>
+                                &lt;dependency&gt;
+                                    &lt;groupId&gt;org.apache.kafka&lt;/groupId&gt;
+                                    &lt;artifactId&gt;kafka-clients&lt;/artifactId&gt;
+                                    &lt;version&gt;3.2.0&lt;/version&gt;
+                                &lt;/dependency&gt;
+                            </code>
+                        </pre>
+                        <p>For more information about the Admin APIs, see the javadoc.
+                        </p>
+                    </article>
+                </section>
+
+                <section class="main-section" id="Where_to_go_from_here">
+                    <header>Where to go from here</header>
+                    <article>
+                        <ul>
+                            <li>To get hands-on experience with Kafka, follow the Quickstart.
+                            </li>
+                            <li>To understand Kafka in more detail, read the Documentation. You also have your choice of Kafka books and academic papers.
+                            </li>
+                            <li>Browse through the Use Cases to learn how other users in our world-wide community are getting value out of Kafka.
+                            </li>
+                            <li>Join a local Kafka meetup group and watch talks from Kafka Summit, the main conference of the Kafka community.
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+                <footer>
+                    <p>The contents of this website are © 2017 Apache Software Foundation under the terms of the Apache License v2. Apache Kafka, Kafka, and the Kafka logo are either registered trademarks or trademarks of The Apache Software Foundation in the United States and other countries.
+                    </p>
+                </footer>
+            </div>
+        </main>
+    </body>
+</html>
